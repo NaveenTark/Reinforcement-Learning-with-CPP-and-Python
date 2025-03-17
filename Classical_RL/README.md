@@ -34,6 +34,7 @@ This project implements a **Gridworld Markov Decision Process (MDP)** environmen
 * **Value Iteration:** An algorithm that learns the optimal state-value function through iterative updates.
 * **Policy Iteration:** An algorithm that alternates between policy evaluation and policy improvement to find the optimal policy.
 * **Q-Value Iteration:** An algorithm that learns the optimal Q-values (action-value function) through iterative updates.
+* **Q-Learning:** A model-free RL algorithm that learns the optimal action-value function by interacting with the environment and updating Q-values based on observed rewards.
 * **Max-Ent Value Iteration:** A variation of value iteration that promotes exploration and stochastic policies by incorporating maximum entropy principles.
 
 ## Algorithms Explained
@@ -49,6 +50,10 @@ Policy Iteration consists of two main steps: policy evaluation and policy improv
 ### Q-Value Iteration
 
 Q-Value Iteration is a dynamic programming algorithm that aims to find the optimal Q-values, which represent the expected cumulative reward for taking a specific action in a given state. By iteratively updating the Q-values based on the Bellman optimality equation, the algorithm converges to the optimal Q-values. The optimal policy can then be derived by selecting the action with the highest Q-value for each state.
+
+###Q-Learning
+
+Q-Learning is a model-free reinforcement learning algorithm that learns the optimal action-value function by interacting with the environment. The agent explores the environment, takes actions, receives rewards, and updates the Q-values using the Bellman equation. Unlike Q-Value Iteration, Q-Learning does not require a known transition model. It balances exploration (choosing random actions) and exploitation (choosing the best-known action) through an epsilon-greedy strategy. Over time, Q-Learning converges to an optimal policy by selecting the action with the highest Q-value in each state.
 
 ### Max-Ent Value Iteration
 
